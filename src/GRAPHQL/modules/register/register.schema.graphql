@@ -1,0 +1,9 @@
+# import Error, AuthResponse from "../../shared.graphql"
+
+type Query {
+    dummy: String
+}
+
+type Mutation {
+    register(email: String, password: String): AuthResponse!
+}

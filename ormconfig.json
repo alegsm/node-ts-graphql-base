@@ -1,0 +1,53 @@
+[
+   {
+      "name": "development",
+      "type": "postgres",
+      "host": "localhost",
+      "port": 5432,
+      "username": "postgres",
+      "password": "12345678",
+      "database": "inmov",
+      "synchronize": true,
+      "logging": true,
+      "entities": [
+         "src/DB/entity/**/*.ts"
+      ],
+      "migrations": [
+         "src/DB/migration/**/*.ts"
+      ],
+      "subscribers": [
+         "src/DB/subscriber/**/*.ts"
+      ],
+      "cli": {
+         "entitiesDir": "src/entity",
+         "migrationsDir": "src/migration",
+         "subscribersDir": "src/subscriber"
+      }
+   },
+   {
+      "name": "test",
+      "type": "postgres",
+      "host": "localhost",
+      "port": 5432,
+      "username": "postgres",
+      "password": "12345678",
+      "database": "inmov_test",
+      "synchronize": true,
+      "logging": false,
+      "dropSchema": true,
+      "entities": [
+         "src/DB/entity/**/*.ts"
+      ],
+      "migrations": [
+         "src/DB/migration/**/*.ts"
+      ],
+      "subscribers": [
+         "src/DB/subscriber/**/*.ts"
+      ],
+      "cli": {
+         "entitiesDir": "src/entity",
+         "migrationsDir": "src/migration",
+         "subscribersDir": "src/subscriber"
+      }
+   }
+]
